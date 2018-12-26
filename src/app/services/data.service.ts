@@ -15,5 +15,11 @@ export class DataService{
     addUser(user){
         return this.http.post('http://jsonplaceholder.typicode.com/users',user);
     }
+    deleteUser(id){
+        return this.http.delete('http://jsonplaceholder.typicode.com/users/'+id);
+    }
+    updateUser(user){
+        return this.http.put('http://jsonplaceholder.typicode.com/users/'+user.id,user);
+    }
 }
 
